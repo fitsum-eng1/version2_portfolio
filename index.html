@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Gen Portfolio | Futuristic Web Experience</title>
+    <meta name="description" content="Explore my cutting-edge portfolio featuring 3D animations, AI elements, and interactive experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+            <div class="loading-text">Loading Neural Interface<span class="dots">...</span></div>
+        </div>
+    </div>
+
+    <!-- Neural Interface Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#hero">FITSE<span>DEV</span></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link" data-nav="hero">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-nav="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="neural-controls">
+                <button id="voice-control" class="neural-btn" aria-label="Voice Control">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button id="theme-toggle" class="neural-btn" aria-label="Theme Toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Neural Progress Indicator -->
+        <div class="neural-progress"></div>
+    </nav>
+
+    <!-- Audio Player (hidden, for voice feedback) -->
+    <audio id="voice-feedback" src="https://assets.codepen.io/217233/success.mp3"></audio>
+
+    <!-- Portal Hero Section -->
+    <section id="hero" class="hero-section">
+        <div id="particles-js"></div>
+        <div class="portal-container">
+            <div class="portal-ring outer"></div>
+            <div class="portal-ring middle"></div>
+            <div class="portal-ring inner"></div>
+            <div id="portal-3d"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-name glitch" data-text="FITSUM G.">FITSUM G.</span>
+                <span class="hero-profession"> HELLO , I'M <span id="dynamic-title">ARCHITECT</span></span>
+            </h1>
+            <p class="hero-description">Creating <span id="ai-tagline">immersive digital experiences at the intersection of art and technology</span></p>
+            <div class="hero-buttons">
+               <a href="#projects"><button class="magnetic-btn primary-btn">Explore My Work</button></a> 
+                <a href="#contact"><button class="magnetic-btn secondary-btn">Connect Link</button></a> 
+            </div>
+            <div class="status-indicators">
+                <div class="status-indicator">
+                    <div class="status-light pulse"></div>
+                    <span class="status-text">Frontend</span>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-light"></div>
+                    <span class="status-text">Machine Learning</span>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-light"></div>
+                    <span class="status-text">problem solving</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="glitch" data-text="MY PROFILE">MY PROFILE</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-container">
+            <div class="about-card-3d">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/fitse.jpg" alt="FITSUM G.">
+                    </div>
+                    <div class="card-back">
+                        <h3>Behind The Code</h3>
+                        <p>Frontend developer with a passion for pushing the boundaries of web technology and creating immersive digital experiences.</p>
+                        <div class="card-back-stats">
+                            <div class="stat">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Years XP</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">3 </div>
+                                <div class="stat-label">Certificate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3>System Configuration</h3>
+                <p>As a Frontend architect and quantum developer, I create immersive digital experiences that blur the line between reality and the digital realm. My neural network is trained in front-end development, 3D modeling, and AI implementation.</p>
+                <p>With expertise in WebGL, Three.js, and blockchain technologies, I build interactive experiences that push the boundaries of what's possible on the web. My mission is to create digital spaces that are not just viewed, but experienced.</p>
+                <div class="skills-container">
+                    <h4>Processing Capabilities</h4>
+                    <div class="skill-bars">
+                        <div class="skill">
+                            <div class="skill-name"> Frontend Development </div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name"> problem solving </div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Machine Learning</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Mobile App Development</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio-stats">
+                    <div class="bio-stat">
+                        <div class="bio-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="bio-info">  kocha , Ethiopia</div>
+                    </div>
+                    <div class="bio-stat">
+                        <div class="bio-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="bio-info">Freelance Available</div>
+                    </div>
+                    <div class="bio-stat">
+                        <div class="bio-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="bio-info">MSc in Software engineering </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metaverse Gallery (Projects) -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2 class="glitch" data-text="PROJECTS GALLERY">PROJECTS GALLERY</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="health">Healthcare</button>
+            <button class="filter-btn" data-filter="E-Commerce">E-Commerce</button>
+            <button class="filter-btn" data-filter="media"> Design & Media</button>
+             <button class="filter-btn" data-filter="digital">Digital Tools</button>
+            <button class="filter-btn" data-filter="travel"> Travel & Education</button>
+        </div>
+            <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card" data-category="travel">
+                <div class="project-img">
+                    <img src="img/travel1.jpg" alt="travel booking">
+                    <div class="project-overlay">
+                        <div class="nft-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Web</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Travel booking </h3>
+                    <p>A seamless and interactive travel booking platform designed for effortless exploration, planning, and reservation—all in one place.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>css</span>
+                        <span>js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="travel/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="project-card" data-category="health">
+                <div class="project-img">
+                    <img src="img/hosptal_management2.jpg" alt="hospital management ">
+                    <div class="project-overlay">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span>FEATURED</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Hospital Management Dashboard </h3>
+                    <p>Streamline patient care, appointments, and records with our all-in-one hospital management system for efficient, secure, and paperless healthcare operations.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="hospital/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3 -->
+            <div class="project-card" data-category="E-Commerce">
+                <div class="project-img">
+                    <img src="img/book_store4.jpg" alt="book store">
+                    <div class="project-overlay">
+                        <div class="nft-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>WEB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Book Store</h3>
+                    <p>Welcome to EDUVISTA your online paradise for book lovers! Explore bestsellers, classics, and hidden gems, with the perfect read for every taste.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Three.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="book_store/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+            <!-- Project Card 4 -->
+            <div class="project-card" data-category="E-Commerce">
+                <div class="project-img">
+                    <img src="img/food_ordering.jpg" alt="Food Ordering">
+                </div>
+                <div class="project-info">
+                    <h3>Food Ordering</h3>
+                    <p>Enjoy a seamless food ordering experience with our web app—browse delicious dishes, customize your meals, and get fast delivery or pickup, all with secure and easy payments.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="ordering/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+            <!-- Project Card 5 -->
+            <div class="project-card" data-category="health">
+                <div class="project-img">
+                    <img src="Fitness-1.0.0/img/work-2.jpg" alt="fitness">
+                </div>
+                <div class="project-info">
+                    <h3>Fitness</h3>
+                    <p>Your ultimate online destination for workout plans, nutrition tips, and fitness motivation to help you achieve your health goals.</p>
+                    <div class="project-tech">
+                        <span>HTML 5</span>
+                        <span>CSS 3</span>
+                        <span>JavaScript</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="Fitness-1.0.0/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+            <!-- Project Card 6 -->
+            <div class="project-card" data-category="travel">
+                <div class="project-img">
+                    <img src="scholar-1.0.0/assets/images/online_learning.jpg" alt="scholar web ">
+                    <div class="project-overlay">
+                        <div class="nft-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>WEB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>online Learning platform</h3>
+                    <p>An online learning platform that offers interactive courses, expert-led training, and flexible education solutions to help you learn anytime, anywhere.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="scholar-1.0.0/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+
+             <!-- Project Card 7 -->
+            <div class="project-card" data-category="media">
+                <div class="project-img">
+                    <img src="032 ultim8-gh-pages/images/dashboard_full_2.png" alt=" UI dashboard ">
+                    <div class="project-overlay">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span>FEATURED</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>soft UI dashboard </h3>
+                    <p>A sleek, intuitive Soft UI dashboard designed for seamless data visualization and effortless user control.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="071 soft-ui-dashboard/pages/dashboard.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+            
+             <!-- Project Card 8 -->
+            <div class="project-card" data-category="E-Commerce">
+                <div class="project-img">
+                    <img src="028 carbook-master/images/car-3.jpg" alt="carbook">
+                    <div class="project-overlay">
+                        <div class="nft-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>WEB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Car Book </h3>
+                    <p>CarBook – Your one-stop platform to browse, compare, and book the perfect car for every journey.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="028 carbook-master/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+
+            <!-- Project Card 9 -->
+            <div class="project-card" data-category="health">
+                <div class="project-img">
+                    <img src="MediCio-1.0.0/assets/img/hero-carousel/hero-carousel-1.jpg" alt="MediCio">
+                    <div class="project-overlay">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span>FEATURED</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>MediCio</h3>
+                    <p>Connecting you with expert doctors, medical resources, and personalized healthcare guidance for a healthier life.</p>
+                    <div class="project-tech">
+                        <span>HTML 5</span>
+                        <span>CSS 3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="MediCio-1.0.0/index.html" class="project-link">
+                            <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Source
+                        </a>
+                    </div>
+                </div>
+                <div class="project-3d-preview">
+                    <div class="project-3d-container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2 class="glitch" data-text="THE SKILLS">THE SKILLS</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-matrix-container">
+            <div id="skills-3d-visualization"></div>
+            <div class="skills-overlay">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>3D & Animation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Three.js</span>
+                            <span class="skill-tag">GSAP</span>
+                            <span class="skill-tag">WebGL</span>
+                            <span class="skill-tag">Blender</span>
+                            <span class="skill-tag">Lottie</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TensorFlow.js</span>
+                            <span class="skill-tag">PYTHON</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Game Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Web.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Smart Contracts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-showcase">
+            <h3>Development Arsenal</h3>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <i class="fab fa-react"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-ethereum"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-unity"></i>
+                    <span>UI/UX</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-cube"></i>
+                    <span>Three.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantum Link (Contact) -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="glitch" data-text="CONTACT LINK">CONTACT LINK</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Establish Connection</h3>
+                <p>Ready to collaborate on cutting-edge digital experiences? Reach out through the quantum link or connect with me on neural platforms.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>FITSEDEV@.io</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kombolcha, Ethiopia</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Available Worldwide</span>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+                <div class="ar-card">
+                    <h4>AR Business Card</h4>
+                    <div class="ar-marker">
+                        <img src="img/Fitsum_Gashaw.png" alt="AR Marker">
+                    </div>
+                    <p>Scan with your phone's camera to see my AR business card</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Transmit Message</span>
+                    </button>
+                </form>
+                <div class="ai-assistant">
+                    <div class="ai-assistant-header">
+                        <div class="ai-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Message Assistant</h4>
+                    </div>
+                    <div class="ai-suggestion">
+                        <p>Let AI help craft your message:</p>
+                        <div class="ai-options">
+                            <button class="ai-option" data-type="job">Job Inquiry</button>
+                            <button class="ai-option" data-type="collab">Collaboration</button>
+                            <button class="ai-option" data-type="project">Project Quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wave-container">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#121212" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,224C672,213,768,171,864,149.3C960,128,1056,128,1152,138.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>FITSE<span>DEV</span></h3>
+                <p>Creating digital experiences at the intersection of art and technology</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-link-group">
+                    <h4>Navigation</h4>
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-link-group">
+                    <h4>Services</h4>
+                    <a href="#">Web Development</a>
+                    <a href="#">3D Visualization</a>
+                    <a href="#">AI Integration</a>
+                    <a href="#">Blockchain Development</a>
+                </div>
+                <div class="footer-link-group">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FITSEDEV. All rights reserved. Powered by the Metaverse.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal for 3D Project Preview -->
+    <div class="modal" id="project-preview-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Project Preview</h2>
+            <div class="modal-body">
+                <div class="modal-3d-container" id="modal-3d-preview"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Neural Connection Modal -->
+    <div class="modal" id="neural-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Neural Connection</h2>
+            <div class="modal-body">
+                <div class="neural-connection-status">
+                    <div class="connection-indicator connecting">
+                        <div class="connection-pulse"></div>
+                    </div>
+                    <div class="connection-message">
+                        <p>Establishing neural link...</p>
+                        <div class="connection-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Voice Command Modal -->
+    <div class="modal" id="voice-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Voice Commands</h2>
+            <div class="modal-body">
+                <div class="voice-status">
+                    <div class="voice-indicator">
+                        <div class="voice-waves">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p class="voice-message">Listening...</p>
+                </div>
+                <div class="voice-commands-list">
+                    <h3>Available Commands</h3>
+                    <ul>
+                        <li>"Go to [section name]"</li>
+                        <li>"Show projects"</li>
+                        <li>"Open [project name]"</li>
+                        <li>"Toggle theme"</li>
+                        <li>"Connect wallet"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
